@@ -544,3 +544,14 @@ tl.from("#left-msg",{
     duration:2,
     
 })
+
+
+// preloader
+
+let preloader = document.getElementById("preloader")
+window.addEventListener("load",()=> {
+    preloader.style = "opacity:0";
+    setTimeout(()=>{
+        preloader.remove()
+    },1000)
+})

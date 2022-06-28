@@ -53,7 +53,10 @@ STYLESHEET INDEXING
 /*-------------------------
     Variables
 -------------------------*/
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Noto+Kufi+Arabic:wght@200;300;400;500;600&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+
+
 :root {
     --main1: #2DBB54;
     --main2: #E9F6E6;
@@ -95,6 +98,7 @@ STYLESHEET INDEXING
     --border-gray: 1px solid var(--color-gray-4);
     --font-primary: "Montserrat", sans-serif;
     --font-secondary: "Poppins", sans-serif;
+    --font-arabic: "Noto Kufi Arabic", sans-serif;
     --font-awesome: "Font Awesome 5 Pro";
     --transition: all 0.3s ease-in-out;
     --font-body-1: 18px;
@@ -220,6 +224,12 @@ ol.list-style li::marker {
         padding-left: 45px;
         padding-right: 45px;
     }
+}
+
+
+
+.bg-gradient-dark {
+    background: #F8F8F8 ;
 }
 /*-------------------------
     Typography
@@ -1063,8 +1073,6 @@ input {
     z-index: -1;
 }
 
-
-
 .axil-btn.btn-fill-primary:hover::after {
     -webkit-transform: translateY(-50%) translateX(-50%) scale(1);
     -ms-transform: translateY(-50%) translateX(-50%) scale(1);
@@ -1081,10 +1089,6 @@ input {
     color: var(--color-white);
 }
 
-
-
-
-
 .axil-btn.btn-large-fluid {
     padding: 23px;
     width: 100%;
@@ -1097,6 +1101,10 @@ input {
 /* -----------------------
 Pagination 
 --------------------------*/
+.lang {
+    font-family: var(--font-arabic);
+}
+
 .pagination {
     margin-top: 80px;
     width: 100%;
@@ -4020,11 +4028,11 @@ Pagination
 }
 
 .counterup-progress .count-number {
-    font-weight: 500;
+    font-weight: 600;
     color: var(--main1);
     font-family: var(--font-primary);
     margin-bottom: 10px;
-    letter-spacing: -0.045em;
+    font-size: 60px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -9127,24 +9135,16 @@ body.op-modal-open {
 }
 
 .footer-social-link ul {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    margin: 0 -5px;
+    justify-content: flex-start;
+    gap: 30px;
+ 
 }
 
 .footer-social-link ul li a {
-    color: var(--color-gray-3);
-    font-size: 30px;
+    color: var(--color-text-dark);
+    font-size: 20px;
     padding: 5px;
     
 }
@@ -9210,7 +9210,7 @@ body.op-modal-open {
 }
 
 .footer-menu-link li a:hover {
-    color: var(--color-link);
+    color: var(--text-body);
 }
 
 .footer-bottom {
@@ -10579,3 +10579,87 @@ body.op-modal-open {
     }
 }
 
+
+
+/****************************** preloader ********************/
+#preloader {
+    position: fixed;
+    inset: 0;
+    opacity: 1;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999999999;
+    display: grid;
+    place-content: center;
+    background-color: #fff;
+    transition: .5s ease-in-out;
+}
+
+#preloader path {
+    fill: var(--main1);
+}
+
+.load1 path:nth-of-type(1) {
+    -webkit-animation: 2s cubic-bezier(0.19, 1, 0.22, 1) 0.15s infinite spinHalf;
+            animation: 2s cubic-bezier(0.19, 1, 0.22, 1) 0.15s infinite spinHalf;
+  }
+  
+  .load1 path:nth-of-type(2) {
+    -webkit-animation: 2s cubic-bezier(0.19, 1, 0.22, 1) 0.3s infinite spinHalf;
+            animation: 2s cubic-bezier(0.19, 1, 0.22, 1) 0.3s infinite spinHalf;
+  }
+  
+  .load1 path:nth-of-type(3) {
+    -webkit-animation: 2s cubic-bezier(0.19, 1, 0.22, 1) 0.45s infinite spinHalf;
+            animation: 2s cubic-bezier(0.19, 1, 0.22, 1) 0.45s infinite spinHalf;
+  }
+  
+  .load1 path:nth-of-type(4) {
+    -webkit-animation: 2s cubic-bezier(0.19, 1, 0.22, 1) 0.6s infinite spinHalf;
+            animation: 2s cubic-bezier(0.19, 1, 0.22, 1) 0.6s infinite spinHalf;
+  }
+  
+  .load1 path:nth-of-type(5) {
+    -webkit-animation: 2s cubic-bezier(0.19, 1, 0.22, 1) 0.75s infinite spinHalf;
+            animation: 2s cubic-bezier(0.19, 1, 0.22, 1) 0.75s infinite spinHalf;
+  }
+  
+  .load1 path:nth-of-type(6) {
+    -webkit-animation: 2s cubic-bezier(0.19, 1, 0.22, 1) 0.9s infinite spinHalf;
+            animation: 2s cubic-bezier(0.19, 1, 0.22, 1) 0.9s infinite spinHalf;
+  }
+  
+  .load1 path:nth-of-type(7) {
+    -webkit-animation: 2s cubic-bezier(0.19, 1, 0.22, 1) 1.05s infinite spinHalf;
+            animation: 2s cubic-bezier(0.19, 1, 0.22, 1) 1.05s infinite spinHalf;
+  }
+  
+  .load1 path:nth-of-type(8) {
+    -webkit-animation: 2s cubic-bezier(0.19, 1, 0.22, 1) 1.2s infinite spinHalf;
+            animation: 2s cubic-bezier(0.19, 1, 0.22, 1) 1.2s infinite spinHalf;
+  }
+  
+  .pre path {
+    transform-origin: center;
+    transform-box: fill-box;
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+  }
+  @-webkit-keyframes spinHalf {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes spinHalf {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(360deg);
+    }
+  }
