@@ -550,7 +550,7 @@ input {
     content: url("../media/location.png");
     position: absolute;
     left: 30px;
-    top: 24px;
+    top: 20px;
     z-index: 1;
 }
 
@@ -1050,7 +1050,7 @@ input {
 }
 
 .axil-btn.btn-fill-primary {
-    background-color: var(--main1);
+    background:linear-gradient(45deg , #2DBB54, #20b98e);
     color: var(--color-white);
     
     overflow: hidden;
@@ -3564,7 +3564,7 @@ Pagination
     content: "";
     height: 100%;
     width: 100%;
-    background-color: var(--main2);
+   
     position: absolute;
     top: 0;
     left: 0;
@@ -7090,11 +7090,7 @@ body.op-modal-open {
     display: none;
 }
 
-@media only screen and (max-width: 991px) {
-    .axil-header .header-navbar .header-logo img {
-        width: 150px;
-    }
-}
+
 
 .axil-header .header-navbar .header-main-nav {
     -webkit-box-flex: 1;
@@ -9121,7 +9117,7 @@ body.op-modal-open {
    Footer Styles
 -------------------------*/
 .footer-area {
-    padding-top: 40px;
+    padding-top: 100px;
 }
 
 .footer-top {
@@ -9160,12 +9156,12 @@ body.op-modal-open {
 }
 
 .footer-widget {
-    margin-bottom: 80px;
+    margin-bottom: 30px;
 }
 
 @media only screen and (max-width: 767px) {
     .footer-widget {
-        margin-bottom: 50px;
+        margin-bottom: 30px;
     }
 }
 
@@ -9208,9 +9204,9 @@ body.op-modal-open {
         font-size: 16px;
     }
 }
-
+.footer-bottom-link ul li a:hover,
 .footer-menu-link li a:hover {
-    color: var(--text-body);
+    color: var(--main1);
 }
 
 .footer-bottom {
@@ -9279,9 +9275,6 @@ body.op-modal-open {
     color: var(--color-gray-1);
 }
 
-.footer-bottom-link ul li a:hover {
-    color: var(--color-link);
-}
 
 .footer-dark {
     background-color: var(--color-dark);
@@ -9315,7 +9308,19 @@ body.op-modal-open {
 .footer-dark .footer-bottom-link ul li:after {
     background-color: var(--color-gray-2);
 }
-
+.footer-area {
+    position: relative;
+}
+.footer-shape1 {
+    position: absolute;
+    transform: rotate(180deg);
+    right: 0%;
+    bottom: 0;
+    z-index: 1;
+}
+.z-2 {
+z-index: 2;
+}
 /*=======================================================================
 5. Dark Style 
 =========================================================================*/
